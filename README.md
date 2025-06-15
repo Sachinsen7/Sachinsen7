@@ -1,6 +1,6 @@
 # 👋 Hey, I'm Sachin Sen!
 
-A Full-Stack Web Developer crafting sleek, user-friendly web apps with React, Node.js, and a sprinkle of creativity. Love building e-commerce platforms, animated UIs, and data-driven visuals. Available for **freelance work**—let's create something awesome together! 😎
+A Full-Stack Web Developer crafting sleek, user-friendly web apps with React, Node.js, and a sprinkle of creativity. Love building e-commerce platforms, animated UIs, and data-driven visuals. Available for **freelance work** let's create something awesome together! 😎
 
 📬 **Hire me**: [sachinsen1920@gmail.com](mailto:sachinsen1920@gmail.com) | [Portfolio](https://my-portfolio-eta-seven-40.vercel.app/) | [LinkedIn](https://www.linkedin.com/in/sachinsen1) | [X](https://x.com/sen_sachiin)
 
@@ -19,13 +19,13 @@ Check out my [Netflix Clone](https://github.com/Sachinsen7/netflix-clone) for an
 ## 📊 This Week I Spent My Time On
 *Powered by [WakaTime](https://wakatime.com/)*  
 
-JavaScript   12 hrs 30 mins  ████████████████████▒░░░  80.50%
-React        2 hrs 15 mins   ███▒░░░░░░░░░░░░░░░░░░░░  14.20%
-CSS          45 mins         █░░░░░░░░░░░░░░░░░░░░░░░  04.80%
-Node.js      10 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░  00.50%
-Figma        5 mins          ░░░░░░░░░░░░░░░░░░░░░░░░  00.20%
+JavaScript   12 hrs 30 mins  ████████████████████▒░░░  80.50% <br/>
+React        2 hrs 15 mins   ███▒░░░░░░░░░░░░░░░░░░░░  14.20% <br/>
+CSS          45 mins         █░░░░░░░░░░░░░░░░░░░░░░░  04.80% <br/>
+Node.js      10 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░  00.50% <br/>
+Figma        5 mins          ░░░░░░░░░░░░░░░░░░░░░░░░  00.20% <br/>
 
-*Note: Add your actual stats via WakaTime integration!*
+
 
 ---
 
