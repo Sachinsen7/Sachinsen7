@@ -2,24 +2,30 @@
 
 <h1 align="center">Hey there, I'm Sachin</h1>
 
+<!-- Typing animation placed at the top -->
 <p align="center">
-  Full Stack Developer <br/>
-  Currently building projects and learning new tech daily. <br/>
-  Passionate about JavaScript, React, and Open Source.
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=435&lines=Hello+there!+I'm+Sachin+👋;MCA+Student+%F0%9F%8E%93+from+India;Learning+Full+Stack+Web+Dev;JavaScript+%7C+React+%7C+Node+Enthusiast;Let's+build+something+awesome!" />
+</p>
+
+<p align="center">
+  Full Stack Developer | Lifelong Learner | Curious Coder<br/>
+  Currently building projects and exploring new technologies<br/>
+  Passionate about JavaScript, React, and Open Source 
 </p>
 
 ---
 
-## Currently Learning
+## 🚀 Currently Learning
 
 - React JS ⚛️  
 - Node.js & Express 🧪  
 - MongoDB 🍃    
+- Tailwind CSS 🌬️  
 - DSA with Java ☕
 
 ---
 
-## Tech Stack
+## 💻 Tech Stack
 
 💡 Languages: HTML, CSS, JavaScript, Java  
 ⚙️ Frameworks: React, Node.js, Express  
@@ -35,9 +41,11 @@
 ## 📈 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=sachinsen&show_icons=true&theme=radical" height="170" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sachinsen&layout=compact&theme=radical" height="170" />
+  <img src="https://github-readme-stats.vercel.app/api?username=sachinsen&show_icons=true&theme=radical&hide=issues&count_private=true" height="170" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sachinsen&layout=compact&theme=radical&langs_count=8&hide=css,scss" height="170" />
 </p>
+
+> ✅ `&hide=css,scss` added to ignore CSS/SCSS so **JavaScript appears on top.**
 
 ---
 
@@ -49,20 +57,13 @@
 
 ---
 
-
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=3000&pause=1000&color=58A6FF&center=true&width=435&lines=Hello+there!+I'm+Sachin+👋;I'm+a+MCA+Student+%F0%9F%8E%93;Learning+React%2C+Node%2C+JavaScript;Let's+build+something+amazing!" />
-</p>
-
----
-
-## Fun Fact
+## 🧩 Fun Fact
 
 💡 I once fixed a bug at 2 AM and forgot how I did it the next morning. True developer moment!
 
 ---
 
-## Connect with Me
+## 📫 Connect with Me
 
 <p align="center">
   <a href="https://linkedin.com/in/sachinsen" target="_blank">
