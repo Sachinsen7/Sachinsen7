@@ -8,7 +8,7 @@ Hi, I'm Sachin Sen! A passionate Full-Stack Web Developer crafting seamless, use
 - 💻 **Currently working on**: Building scalable web apps like e-commerce platforms and enhancing projects like the Yadav Bus Services website.
 - 🌱 **Learning**: Advanced Data Structures & Algorithms (DSA), Java, and deepening my expertise in UI/UX with tools like Figma.
 - 🎯 **Goal**: Land a role as a Front-End or Full-Stack Developer and contribute to impactful open-source projects.
-- 📫 **Reach me**: [[Email](sachinsen1920@gmail.com)] | [[LinkedIn URL](https://www.linkedin.com/in/sachinsen1)] | [[Portfolio](https://my-portfolio-eta-seven-40.vercel.app/)] | [[X](https://x.com/sen_sachiin)]
+- 📫 **Reach me**: [Email(sachinsen1920@gmail.com)] | [LinkedIn URL(https://www.linkedin.com/in/sachinsen1)] | [Portfolio(https://my-portfolio-eta-seven-40.vercel.app/)] | [X(https://x.com/sen_sachiin)]
 
 ---
 
