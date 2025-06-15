@@ -1,10 +1,10 @@
-# 👋 Welcome to My GitHub Profile!
+# Welcome to My GitHub Profile!
 
 Hi, I'm Sachin Sen! A passionate Full-Stack Web Developer crafting seamless, user-centric web applications with a knack for modern UI/UX and scalable backend solutions. I thrive on turning ideas into reality through code, animations, and data-driven designs. 
 
 ---
 
-## 🌟 About Me
+## About Me
 - 💻 **Currently working on**: Building scalable web apps like e-commerce platforms and enhancing projects like the Yadav Bus Services website.
 - 🌱 **Learning**: Advanced Data Structures & Algorithms (DSA), Java, and deepening my expertise in UI/UX with tools like Figma.
 - 🎯 **Goal**: Land a role as a Front-End or Full-Stack Developer and contribute to impactful open-source projects.
@@ -98,5 +98,3 @@ Here are some projects I’m proud of:
 Thanks for visiting! Let’s code something extraordinary together. 😄
 
 ---
-
-*Powered by coffee ☕ and a passion for coding 🧠*
