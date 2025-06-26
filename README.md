@@ -19,8 +19,6 @@ Explore my [Netflix Clone](https://github.com/Sachinsen7/netflix-clone) for a re
 
 ## Recent Activity
 
-*Powered by [WakaTime](https://wakatime.com/)*
-
 - JavaScript: 12 hrs 30 mins (80.50%)
 - React: 2 hrs 15 mins (14.20%)
 - CSS: 45 mins (4.80%)
@@ -33,14 +31,10 @@ This breakdown reflects my focus on delivering high-quality code and design acro
 
 ## Productivity Metrics
 
-*Tracked via [Todoist](https://todoist.com/)*
-
 - **Karma Points**: 5,000+ (demonstrating consistent task management)
 - **Tasks Completed Today**: 0 (strategic planning day)
 - **Total Tasks Completed**: 500+
 - **Longest Task Streak**: 7 days
-
-*Note: Update with your actual Todoist stats for accuracy.*
 
 ---
 
@@ -48,13 +42,6 @@ This breakdown reflects my focus on delivering high-quality code and design acro
 
 ![Sachin’s GitHub Stats](https://github-readme-stats.vercel.app/api?username=Sachinsen7&show_icons=true&theme=radical)  
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Sachinsen7&layout=compact&theme=radical)
-
----
-
-## Support My Work
-
-If you appreciate my work, consider supporting me to keep the code flowing.  
-[Buy Me A Coffee](https://www.buymeacoffee.com/[Your BMC Username])
 
 ---
 
