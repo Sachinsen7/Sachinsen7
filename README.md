@@ -1,74 +1,84 @@
-# 👋 Hey, I'm Sachin Sen!
+# Sachin Sen | Full-Stack Web Developer
 
-A Full-Stack Web Developer crafting sleek, user-friendly web apps with React, Node.js, and a sprinkle of creativity. Love building e-commerce platforms, animated UIs, and data-driven visuals. Available for **freelance work** let's create something awesome together! 😎
+I am a dedicated Full-Stack Web Developer specializing in building scalable, user-focused web applications using React, Node.js, and modern design principles. My passion lies in creating seamless e-commerce platforms, engaging animated interfaces, and insightful data visualizations. I am available for freelance projects and eager to collaborate on innovative solutions.
 
-📬 **Hire me**: [sachinsen1920@gmail.com](mailto:sachinsen1920@gmail.com) | [Portfolio](https://my-portfolio-eta-seven-40.vercel.app/) | [LinkedIn](https://www.linkedin.com/in/sachinsen1) | [X](https://x.com/sen_sachiin)
-
----
-
-## 💻 What I Do
-- **Frontend**: React, Tailwind CSS, Framer Motion for smooth animations.
-- **Backend**: Node.js, Express, MongoDB for scalable APIs.
-- **UI/UX**: Figma for pixel-perfect designs, Material UI for polished components.
-- **Visuals**: Chart.js for dynamic graphs in apps like my Spotify Playlist Viewer.
-
-Check out my [Netflix Clone](https://github.com/Sachinsen7/netflix-clone) for animated card hovers or [Yadav Bus Services](https://github.com/sachinsen1/yadav-bus-services) for a full-stack booking platform! 🚀
+**Contact**: [sachinsen1920@gmail.com](mailto:sachinsen1920@gmail.com) | [Portfolio](https://my-portfolio-eta-seven-40.vercel.app/) | [LinkedIn](https://www.linkedin.com/in/sachinsen1) | [X](https://x.com/sen_sachiin)
 
 ---
 
-## 📊 This Week I Spent My Time On
-*Powered by [WakaTime](https://wakatime.com/)*  
+## Expertise
 
-JavaScript   12 hrs 30 mins  ████████████████████▒░░░  80.50% <br/>
-React        2 hrs 15 mins   ███▒░░░░░░░░░░░░░░░░░░░░  14.20% <br/>
-CSS          45 mins         █░░░░░░░░░░░░░░░░░░░░░░░  04.80% <br/>
-Node.js      10 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░  00.50% <br/>
-Figma        5 mins          ░░░░░░░░░░░░░░░░░░░░░░░░  00.20% <br/>
+- **Frontend Development**: Proficient in React, Tailwind CSS, and Framer Motion to deliver responsive and visually engaging user interfaces.
+- **Backend Development**: Skilled in Node.js, Express, and MongoDB for building robust, scalable APIs.
+- **UI/UX Design**: Experienced with Figma for crafting pixel-perfect designs and Material UI for polished, reusable components.
+- **Data Visualization**: Adept at using Chart.js to create dynamic, interactive charts for data-driven applications.
 
-
+Explore my [Netflix Clone](https://github.com/Sachinsen7/netflix-clone) for a responsive UI with animated card interactions or [Yadav Bus Services](https://github.com/Sachinsen7/yadav-bus-services) for a full-stack booking platform with real-time functionality.
 
 ---
 
-## 🚧 My Todoist Stats
-*Tracking my hustle with [Todoist](https://todoist.com/)*  
-🏆 **Karma Points**: 5,000+ (grinding hard!)  
-🌸 **Today’s Tasks**: 0 completed (chillin’ today)  
-✅ **Total Tasks**: 500+ completed  
-⏳ **Longest Streak**: 7 days  
+## Recent Activity
 
-*Note: Update with your real Todoist stats!*
+*Powered by [WakaTime](https://wakatime.com/)*
+
+- JavaScript: 12 hrs 30 mins (80.50%)
+- React: 2 hrs 15 mins (14.20%)
+- CSS: 45 mins (4.80%)
+- Node.js: 10 mins (0.50%)
+- Figma: 5 mins (0.20%)
+
+This breakdown reflects my focus on delivering high-quality code and design across multiple technologies.
 
 ---
 
-## 📈 My GitHub Stats
+## Productivity Metrics
+
+*Tracked via [Todoist](https://todoist.com/)*
+
+- **Karma Points**: 5,000+ (demonstrating consistent task management)
+- **Tasks Completed Today**: 0 (strategic planning day)
+- **Total Tasks Completed**: 500+
+- **Longest Task Streak**: 7 days
+
+*Note: Update with your actual Todoist stats for accuracy.*
+
+---
+
+## GitHub Stats
+
 ![Sachin’s GitHub Stats](https://github-readme-stats.vercel.app/api?username=Sachinsen7&show_icons=true&theme=radical)  
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Sachinsen7&layout=compact&theme=radical)
 
 ---
 
-## ☕ Support My Work
-Love what I do? Buy me a coffee to keep the code flowing! 🥺👉👈  
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-FFDD00?style=flat&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/[Your BMC Username])
+## Support My Work
+
+If you appreciate my work, consider supporting me to keep the code flowing.  
+[Buy Me A Coffee](https://www.buymeacoffee.com/[Your BMC Username])
 
 ---
 
-## 🛠️ Featured Freelance Projects
-- **[Netflix Clone](https://github.com/Sachinsen7/netflix-clone)**: Responsive UI with React & Tailwind CSS, featuring animated transitions.  
-- **[Spotify Playlist Viewer](https://github.com/Sachinsen7/spotify-playlist-viewer)**: Dynamic charts with Spotify API & Chart.js for playlist insights.  
-- **[Yadav Bus Services](https://github.com/Sachinsen7/yadav-bus-services)**: Full-stack booking platform with React, Node.js, & Express.  
+## Featured Freelance Projects
+
+- **[Netflix Clone](https://github.com/Sachinsen7/netflix-clone)**: A responsive UI built with React and Tailwind CSS, featuring animated transitions for an engaging user experience.
+- **[Spotify Playlist Viewer](https://github.com/Sachinsen7/spotify-playlist-viewer)**: A data-driven application using the Spotify API and Chart.js to visualize playlist insights.
+- **[Yadav Bus Services](https://github.com/Sachinsen7/yadav-bus-services)**: A full-stack booking platform developed with React, Node.js, and Express for seamless functionality.
 
 ---
 
-## 🎨 Animations & Style
-I make apps pop with:
-- **Hover Effects**: Smooth card animations using Tailwind CSS & Framer Motion.
-- **Scroll Magic**: GSAP for parallax effects in portfolios.
-- **Graphs**: Interactive Chart.js visuals for data-driven apps.
+## Design & Animation Expertise
 
-See my [Portfolio](https://my-portfolio-eta-seven-40.vercel.app/) for live demos! ✨
+I enhance applications with:
+- **Interactive Hover Effects**: Smooth animations using Tailwind CSS and Framer Motion for engaging user interactions.
+- **Parallax Scrolling**: GSAP-driven effects to create immersive portfolio experiences.
+- **Dynamic Visuals**: Interactive Chart.js graphs for data-driven applications.
+
+Visit my [Portfolio](https://my-portfolio-eta-seven-40.vercel.app/) to see live demonstrations of these features.
 
 ---
 
-Thanks for stopping by! DM me on [X](https://x.com/sen_sachiin) or email [sachinsen1920@gmail.com](mailto:sachinsen1920@gmail.com) for freelance gigs. Let’s build something epic! 😄
+## Let’s Collaborate
 
-*Fueled by code & coffee ☕*
+Thank you for visiting my profile. I am available for freelance opportunities and excited to build impactful solutions. Contact me via [X](https://x.com/sen_sachiin) or email at [sachinsen1920@gmail.com](mailto:sachinsen1920@gmail.com) to discuss your next project.
+
+*Driven by innovation and precision in code.*
