@@ -68,4 +68,3 @@ Visit my [Portfolio](https://my-portfolio-eta-seven-40.vercel.app/) to see live 
 
 Thank you for visiting my profile. I am available for freelance opportunities and excited to build impactful solutions. Contact me via [X](https://x.com/sen_sachiin) or email at [sachinsen1920@gmail.com](mailto:sachinsen1920@gmail.com) to discuss your next project.
 
-*Driven by innovation and precision in code.*
