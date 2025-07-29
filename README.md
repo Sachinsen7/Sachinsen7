@@ -8,7 +8,8 @@ Explore my [Netflix Clone](https://github.com/Sachinsen7/netflix-clone) for a re
 ---
 ## GitHub Stats
 
-![Sachin’s GitHub Stats](https://github-readme-stats.vercel.app/api?username=Sachinsen7&show_icons=true&theme=radical)  
+![Sachin’s GitHub Stats](https://github-readme-stats.vercel.app/api?username=Sachinsen7&show_icons=true&theme=radical)
+---
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Sachinsen7&layout=compact&theme=radical)
 
 ---
@@ -20,12 +21,4 @@ Explore my [Netflix Clone](https://github.com/Sachinsen7/netflix-clone) for a re
 - **[Yadav Bus Services](https://github.com/Sachinsen7/yadav-bus-services)**: A full-stack booking platform developed with React, Node.js, and Express for seamless functionality.
 
 ---
-
-## Design & Animation Expertise
-
-
-
-## Let’s Collaborate
-
-Thank you for visiting my profile. I am available for freelance opportunities and excited to build impactful solutions. Contact me via [X](https://x.com/sen_sachiin) or email at [sachinsen1920@gmail.com](mailto:sachinsen1920@gmail.com) to discuss your next project.
 
