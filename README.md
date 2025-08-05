@@ -17,8 +17,8 @@ Explore my [Netflix Clone](https://github.com/Sachinsen7/netflix-clone) for a re
 ## Featured Freelance Projects
 
 - **[Netflix Clone](https://github.com/Sachinsen7/netflix-clone)**: A responsive UI built with React and Tailwind CSS, featuring animated transitions for an engaging user experience.
-- **[Spotify Playlist Viewer](https://github.com/Sachinsen7/spotify-playlist-viewer)**: A data-driven application using the Spotify API and Chart.js to visualize playlist insights.
-- **[Yadav Bus Services](https://github.com/Sachinsen7/yadav-bus-services)**: A full-stack booking platform developed with React, Node.js, and Express for seamless functionality.
+- **[Spotify Playlist Viewer](https://github.com/Sachinsen7/melodyheven)**: A data-driven application using the Spotify API and Chart.js to visualize playlist insights.
+- **[Yadav Bus Services](https://github.com/Sachinsen7/yadavBusService)**: A full-stack booking platform developed with React, Node.js, and Express for seamless functionality.
 
 ---
 
