@@ -11,10 +11,3 @@
 
 ---
 
-## Featured Freelance Projects
-
-- **[Spotify Playlist Viewer](https://github.com/Sachinsen7/melodyheven)**: A data-driven application using the Spotify API and Chart.js to visualize playlist insights.
-- **[Yadav Bus Services](https://github.com/Sachinsen7/yadavBusService)**: A full-stack booking platform developed with React, Node.js, and Express for seamless functionality.
-
----
-
