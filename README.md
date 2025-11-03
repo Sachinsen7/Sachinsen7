@@ -1,13 +1,31 @@
-# Sachin Sen | Full-Stack Web Developer
-
-**Contact**: [sachinsen1920@gmail.com](mailto:sachinsen1920@gmail.com) | [Portfolio](https://sachinsen.vercel.app/) | [LinkedIn](https://www.linkedin.com/in/sachinsen1) | [X](https://x.com/sen_sachiin)
+<p align="center">
+  <img 
+    src="https://github-readme-stats.vercel.app/api?username=Sachinsen7&show_icons=true&theme=transparent&hide_border=true&include_all_commits=true&count_private=true" 
+    alt="GitHub Stats" 
+    height="170"
+  />
+  <img 
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=Sachinsen7&layout=compact&theme=transparent&hide_border=true" 
+    alt="Top Languages" 
+    height="170"
+  />
+</p>
 
 ---
-## GitHub Stats
 
-![Sachin’s GitHub Stats](https://github-readme-stats.vercel.app/api?username=Sachinsen7&show_icons=true&theme=radical)
+<p align="center">
+  <img 
+    src="https://streak-stats.demolab.com?user=Sachinsen7&theme=transparent&hide_border=true" 
+    alt="GitHub Streak" 
+    height="170"
+  />
+</p>
+
 ---
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Sachinsen7&layout=compact&theme=radical)
 
----
-
+<p align="center">
+  <img 
+    src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Sachinsen7&theme=transparent" 
+    alt="Profile Details" 
+  />
+</p>
