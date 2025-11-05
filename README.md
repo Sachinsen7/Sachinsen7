@@ -13,13 +13,13 @@
 
 ---
 
-<p align="center">
+<!-- <p align="center">
   <img 
     src="https://streak-stats.demolab.com?user=Sachinsen7&theme=transparent&hide_border=true" 
     alt="GitHub Streak" 
     height="170"
   />
-</p>
+</p> -->
 
 ---
 
