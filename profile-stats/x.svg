@@ -1,0 +1,5 @@
+<svg width="148" height="50" viewBox="0 0 148 50" xmlns="http://www.w3.org/2000/svg" font-family="'Cascadia Code', 'JetBrains Mono', 'Fira Code', ui-monospace, 'SF Mono', Consolas, monospace">
+  <rect x="6" y="6" width="142" height="44" rx="10" fill="#12100E" />
+  <rect x="0" y="0" width="142" height="44" rx="10" fill="#FFD400" stroke="#12100E" stroke-width="3" />
+  <text x="71" y="27" font-size="13" font-weight="800" letter-spacing="0.4" fill="#12100E" text-anchor="middle">X / TWITTER</text>
+</svg>

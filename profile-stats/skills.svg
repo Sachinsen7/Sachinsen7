@@ -1,0 +1,59 @@
+<svg width="460" height="206" viewBox="0 0 460 206" xmlns="http://www.w3.org/2000/svg" font-family="'Cascadia Code', 'JetBrains Mono', 'Fira Code', ui-monospace, 'SF Mono', Consolas, monospace">
+  <defs>
+    <pattern id="dots-c0" width="9" height="9" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1" fill="#12100E" opacity="0.12" />
+    </pattern>
+    <clipPath id="head-c0"><path d="M0,14 a14,14 0 0 1 14,-14 h426 a14,14 0 0 1 14,14 v30 h-454 Z" /></clipPath>
+  </defs>
+  <rect x="6" y="6" width="454" height="200" rx="14" fill="#12100E" />
+  <rect x="0" y="0" width="454" height="200" rx="14" fill="#FFFDF7" stroke="#12100E" stroke-width="3" />
+  <path d="M0,14 a14,14 0 0 1 14,-14 h426 a14,14 0 0 1 14,14 v30 h-454 Z" fill="#00D19B" stroke="#12100E" stroke-width="3" />
+  <rect x="0" y="0" width="454" height="44" fill="url(#dots-c0)" clip-path="url(#head-c0)" />
+  <g transform="translate(18, 12) scale(0.2)">
+    <path d="M60 6 L25 57 L45 57 L39 94 L76 43 L54 43 Z" fill="#12100E">
+      <animate attributeName="opacity" values="1;1;0.35;1;1" keyTimes="0;0.85;0.9;0.95;1" dur="5s" repeatCount="indefinite" />
+    </path>
+  </g>
+  <text x="42" y="28" font-size="14" font-weight="700" letter-spacing="0.5" fill="#12100E">SKILLS &amp; TOOLS</text>
+  
+    <rect x="20" y="64" width="133.33333333333334" height="34" rx="9" fill="#FFFDF7" stroke="#12100E" stroke-width="2" opacity="0">
+      <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="0s" dur="0.3s" fill="freeze" />
+    </rect>
+    <rect x="29" y="76" width="10" height="10" rx="3" fill="#FFD400" stroke="#12100E" stroke-width="1.4" />
+    <text x="46" y="85" font-size="12" font-weight="700" fill="#12100E">JavaScript</text>
+    <rect x="163.33333333333334" y="64" width="133.33333333333334" height="34" rx="9" fill="#FFFDF7" stroke="#12100E" stroke-width="2" opacity="0">
+      <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="0.04s" dur="0.3s" fill="freeze" />
+    </rect>
+    <rect x="172.33333333333334" y="76" width="10" height="10" rx="3" fill="#FF5D3B" stroke="#12100E" stroke-width="1.4" />
+    <text x="189.33333333333334" y="85" font-size="12" font-weight="700" fill="#12100E">Rust</text>
+    <rect x="306.6666666666667" y="64" width="133.33333333333334" height="34" rx="9" fill="#FFFDF7" stroke="#12100E" stroke-width="2" opacity="0">
+      <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="0.08s" dur="0.3s" fill="freeze" />
+    </rect>
+    <rect x="315.6666666666667" y="76" width="10" height="10" rx="3" fill="#00D19B" stroke="#12100E" stroke-width="1.4" />
+    <text x="332.6666666666667" y="85" font-size="12" font-weight="700" fill="#12100E">Java</text>
+    <rect x="20" y="108" width="133.33333333333334" height="34" rx="9" fill="#FFFDF7" stroke="#12100E" stroke-width="2" opacity="0">
+      <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="0.12s" dur="0.3s" fill="freeze" />
+    </rect>
+    <rect x="29" y="120" width="10" height="10" rx="3" fill="#4D7CFE" stroke="#12100E" stroke-width="1.4" />
+    <text x="46" y="129" font-size="12" font-weight="700" fill="#12100E">Go</text>
+    <rect x="163.33333333333334" y="108" width="133.33333333333334" height="34" rx="9" fill="#FFFDF7" stroke="#12100E" stroke-width="2" opacity="0">
+      <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="0.16s" dur="0.3s" fill="freeze" />
+    </rect>
+    <rect x="172.33333333333334" y="120" width="10" height="10" rx="3" fill="#B15BFF" stroke="#12100E" stroke-width="1.4" />
+    <text x="189.33333333333334" y="129" font-size="12" font-weight="700" fill="#12100E">Angular</text>
+    <rect x="306.6666666666667" y="108" width="133.33333333333334" height="34" rx="9" fill="#FFFDF7" stroke="#12100E" stroke-width="2" opacity="0">
+      <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="0.2s" dur="0.3s" fill="freeze" />
+    </rect>
+    <rect x="315.6666666666667" y="120" width="10" height="10" rx="3" fill="#FFD400" stroke="#12100E" stroke-width="1.4" />
+    <text x="332.6666666666667" y="129" font-size="12" font-weight="700" fill="#12100E">HTML5</text>
+    <rect x="20" y="152" width="133.33333333333334" height="34" rx="9" fill="#FFFDF7" stroke="#12100E" stroke-width="2" opacity="0">
+      <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="0.24s" dur="0.3s" fill="freeze" />
+    </rect>
+    <rect x="29" y="164" width="10" height="10" rx="3" fill="#FF5D3B" stroke="#12100E" stroke-width="1.4" />
+    <text x="46" y="173" font-size="12" font-weight="700" fill="#12100E">CSS3</text>
+    <rect x="163.33333333333334" y="152" width="133.33333333333334" height="34" rx="9" fill="#FFFDF7" stroke="#12100E" stroke-width="2" opacity="0">
+      <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="0.28s" dur="0.3s" fill="freeze" />
+    </rect>
+    <rect x="172.33333333333334" y="164" width="10" height="10" rx="3" fill="#00D19B" stroke="#12100E" stroke-width="1.4" />
+    <text x="189.33333333333334" y="173" font-size="12" font-weight="700" fill="#12100E">Git</text>
+</svg>
