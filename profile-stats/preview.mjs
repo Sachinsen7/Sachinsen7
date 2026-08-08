@@ -33,7 +33,6 @@ const skills = [
   { label: 'TypeScript', icon: 'typescript' },
   { label: 'JavaScript', icon: 'javascript' },
   { label: 'Rust', icon: 'rust' },
-  { label: 'Java', icon: 'java' },
   { label: 'Go', icon: 'go' },
   { label: 'Angular', icon: 'angular' },
   { label: 'HTML5', icon: 'html5' },
