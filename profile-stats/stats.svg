@@ -1,22 +1,16 @@
-<svg width="460" height="194" viewBox="0 0 460 194" xmlns="http://www.w3.org/2000/svg" font-family="'Cascadia Code', 'JetBrains Mono', 'Fira Code', ui-monospace, 'SF Mono', Consolas, monospace">
-  <rect x="6" y="6" width="454" height="188" rx="14" fill="#12100E" />
-  <rect x="0" y="0" width="454" height="188" rx="14" fill="#FFFDF7" stroke="#12100E" stroke-width="3" />
-  <path d="M0,14 a14,14 0 0 1 14,-14 h426 a14,14 0 0 1 14,14 v30 h-454 Z" fill="#FFD400" stroke="#12100E" stroke-width="3" />
-  <g transform="translate(18, 12) scale(0.2)">
+<svg width="400" height="118" viewBox="0 0 400 118" xmlns="http://www.w3.org/2000/svg" font-family="'Cascadia Code', 'JetBrains Mono', 'Fira Code', ui-monospace, 'SF Mono', Consolas, monospace">
+  <rect x="4" y="4" width="396" height="114" rx="8" fill="#12100E" />
+  <rect x="0" y="0" width="396" height="114" rx="8" fill="#FFFDF7" stroke="#12100E" stroke-width="2" />
+  <g transform="translate(14, 8) scale(0.14)">
     <path d="M60 6 L25 57 L45 57 L39 94 L76 43 L54 43 Z" fill="#12100E" />
   </g>
-  <text x="42" y="28" font-size="14" font-weight="700" letter-spacing="0.5" fill="#12100E">SACHIN SEN'S GITHUB STATS</text>
+  <text x="30" y="19" font-size="11" font-weight="700" letter-spacing="0.4" fill="#12100E">SACHIN SEN'S GITHUB STATS</text>
+  <line x1="0" y1="30" x2="396" y2="30" stroke="#12100E" stroke-width="1.5" opacity="0.15" />
   
-    <text x="440" y="62" font-size="9" font-weight="700" fill="#12100E" opacity="0.45" text-anchor="end">2026-08-08</text>
-    
-    <rect x="20" y="74" width="14" height="14" rx="4" fill="#FFD400" stroke="#12100E" stroke-width="1.5" />
-    <text x="44" y="90" font-size="12" font-weight="700" letter-spacing="0.6" fill="#12100E" opacity="0.85">PUBLIC REPOS</text>
-    <text x="432" y="90" font-size="18" font-weight="800" fill="#12100E" text-anchor="end">57</text>
-    <rect x="20" y="114" width="14" height="14" rx="4" fill="#FF5D3B" stroke="#12100E" stroke-width="1.5" />
-    <text x="44" y="130" font-size="12" font-weight="700" letter-spacing="0.6" fill="#12100E" opacity="0.85">TOTAL STARS</text>
-    <text x="432" y="130" font-size="18" font-weight="800" fill="#12100E" text-anchor="end">23</text>
-    <rect x="20" y="154" width="14" height="14" rx="4" fill="#00D19B" stroke="#12100E" stroke-width="1.5" />
-    <text x="44" y="170" font-size="12" font-weight="700" letter-spacing="0.6" fill="#12100E" opacity="0.85">FOLLOWERS</text>
-    <text x="432" y="170" font-size="18" font-weight="800" fill="#12100E" text-anchor="end">17</text>
-  
+    <text x="14" y="52" font-size="10" font-weight="700" letter-spacing="0.4" fill="#12100E" opacity="0.6">PUBLIC REPOS</text>
+    <text x="382" y="52" font-size="13" font-weight="800" fill="#12100E" text-anchor="end">57</text>
+    <text x="14" y="76" font-size="10" font-weight="700" letter-spacing="0.4" fill="#12100E" opacity="0.6">TOTAL STARS</text>
+    <text x="382" y="76" font-size="13" font-weight="800" fill="#12100E" text-anchor="end">23</text>
+    <text x="14" y="100" font-size="10" font-weight="700" letter-spacing="0.4" fill="#12100E" opacity="0.6">FOLLOWERS</text>
+    <text x="382" y="100" font-size="13" font-weight="800" fill="#12100E" text-anchor="end">17</text>
 </svg>
