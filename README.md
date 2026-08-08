@@ -27,36 +27,11 @@
 
 ---
 
-### 🔧 Featured Projects
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-**[⚡ Blip](https://github.com/Sachinsen7/blip)**
-
-A local-first text expander for Chrome & Brave. Type `;;pr` in any text box on any site and it expands — no account, no server, no network calls ever.
-
-`JavaScript` · `Manifest V3` · `Chrome Extension`
-
-</td>
-<td width="50%" valign="top">
-
-**[⚡ Blip Desktop](https://github.com/Sachinsen7/blip-desktop)**
-
-The same idea, system-wide. A Windows keyboard hook written in Rust that expands text in *any* application — VS Code, Slack, Word, not just the browser.
-
-`Rust` · `Tauri` · `Win32`
-
-</td>
-</tr>
-</table>
-
----
-
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=Sachinsen7&show_icons=true&theme=transparent&hide_border=true&include_all_commits=true&count_private=true" alt="GitHub Stats" height="170" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Sachinsen7&layout=compact&theme=transparent&hide_border=true" alt="Top Languages" height="170" />
+<img src="profile-stats/stats.svg" alt="GitHub Stats" />
+<img src="profile-stats/langs.svg" alt="Top Languages" />
+<br>
+<img src="profile-stats/flow.svg" alt="Activity Flow" />
 
 </div>

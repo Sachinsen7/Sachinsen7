@@ -1,0 +1,35 @@
+name: Update profile stats
+
+on:
+  schedule:
+    - cron: '0 */12 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'profile-stats/generate.mjs'
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - run: node profile-stats/generate.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          STATS_USERNAME: Sachinsen7
+
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile-stats/stats.svg profile-stats/langs.svg profile-stats/flow.svg profile-stats/snapshot.json
+          git diff --staged --quiet || git commit -m "Update profile stats"
+          git push
