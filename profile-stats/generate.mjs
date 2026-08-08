@@ -18,9 +18,9 @@ const CARD_W = 400;
 const MONO = "'Cascadia Code', 'JetBrains Mono', 'Fira Code', ui-monospace, 'SF Mono', Consolas, monospace";
 
 const SKILLS = [
+  { label: 'TypeScript', icon: 'typescript' },
   { label: 'JavaScript', icon: 'javascript' },
   { label: 'Rust', icon: 'rust' },
-  { label: 'Java', icon: 'java' },
   { label: 'Go', icon: 'go' },
   { label: 'Angular', icon: 'angular' },
   { label: 'HTML5', icon: 'html5' },
