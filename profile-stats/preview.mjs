@@ -30,6 +30,7 @@ const activityDays = new Set();
 });
 
 const skills = [
+  { label: 'TypeScript', icon: 'typescript' },
   { label: 'JavaScript', icon: 'javascript' },
   { label: 'Rust', icon: 'rust' },
   { label: 'Java', icon: 'java' },
