@@ -18,9 +18,9 @@ const MONO = "'Cascadia Code', 'JetBrains Mono', 'Fira Code', ui-monospace, 'SF 
 
 const SKILLS = ['JavaScript', 'Rust', 'Java', 'Go', 'Angular', 'HTML5', 'CSS3', 'Git'];
 const SOCIALS = [
-  { file: 'li', label: 'LinkedIn', color: PALETTE[3] },
-  { file: 'x', label: 'X / Twitter', color: PALETTE[0] },
-  { file: 'mail', label: 'Email', color: PALETTE[1] },
+  { file: 'li', label: 'LinkedIn' },
+  { file: 'x', label: 'X / Twitter' },
+  { file: 'mail', label: 'Email' },
 ];
 
 async function api(path) {
@@ -88,29 +88,17 @@ function escapeXml(value) {
   return String(value).replace(/[&<>]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));
 }
 
-let cardSerial = 0;
-
-export function card(width, height, title, body, headerColor = YELLOW) {
+export function card(width, height, title, body) {
   const w = width - SHADOW;
   const h = height - SHADOW;
-  const uid = `c${cardSerial++}`;
   const headerPath = `M0,14 a14,14 0 0 1 14,-14 h${w - 28} a14,14 0 0 1 14,14 v${HEADER - 14} h-${w} Z`;
 
   return `<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg" font-family="${MONO}">
-  <defs>
-    <pattern id="dots-${uid}" width="9" height="9" patternUnits="userSpaceOnUse">
-      <circle cx="1.5" cy="1.5" r="1" fill="${INK}" opacity="0.12" />
-    </pattern>
-    <clipPath id="head-${uid}"><path d="${headerPath}" /></clipPath>
-  </defs>
   <rect x="${SHADOW}" y="${SHADOW}" width="${w}" height="${h}" rx="14" fill="${INK}" />
   <rect x="0" y="0" width="${w}" height="${h}" rx="14" fill="${PAPER}" stroke="${INK}" stroke-width="3" />
-  <path d="${headerPath}" fill="${headerColor}" stroke="${INK}" stroke-width="3" />
-  <rect x="0" y="0" width="${w}" height="${HEADER}" fill="url(#dots-${uid})" clip-path="url(#head-${uid})" />
+  <path d="${headerPath}" fill="${YELLOW}" stroke="${INK}" stroke-width="3" />
   <g transform="translate(18, 12) scale(0.2)">
-    <path d="${BOLT}" fill="${INK}">
-      <animate attributeName="opacity" values="1;1;0.35;1;1" keyTimes="0;0.85;0.9;0.95;1" dur="5s" repeatCount="indefinite" />
-    </path>
+    <path d="${BOLT}" fill="${INK}" />
   </g>
   <text x="42" y="${HEADER / 2 + 6}" font-size="14" font-weight="700" letter-spacing="0.5" fill="${INK}">${escapeXml(title.toUpperCase())}</text>
   ${body}
@@ -177,7 +165,7 @@ export function langsCard(totals) {
     <clipPath id="bar"><rect x="21" y="${barY + 1}" width="410" height="12" rx="6" /></clipPath>
     <g clip-path="url(#bar)">${barSvg}</g>
     ${legendSvg}
-  `, PALETTE[4]);
+  `);
 }
 
 export function skillsCard(skills) {
@@ -203,17 +191,17 @@ export function skillsCard(skills) {
   }).join('');
 
   const height = HEADER + 20 + rows * chipH + (rows - 1) * gap + 20;
-  return card(460, height, 'Skills & Tools', chips, PALETTE[2]);
+  return card(460, height, 'Skills & Tools', chips);
 }
 
-export function socialBadge(label, color) {
+export function socialBadge(label) {
   const width = 148;
   const height = 50;
   const w = width - SHADOW;
   const h = height - SHADOW;
   return `<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg" font-family="${MONO}">
   <rect x="${SHADOW}" y="${SHADOW}" width="${w}" height="${h}" rx="10" fill="${INK}" />
-  <rect x="0" y="0" width="${w}" height="${h}" rx="10" fill="${color}" stroke="${INK}" stroke-width="3" />
+  <rect x="0" y="0" width="${w}" height="${h}" rx="10" fill="${PAPER}" stroke="${INK}" stroke-width="3" />
   <text x="${w / 2}" y="${h / 2 + 5}" font-size="13" font-weight="800" letter-spacing="0.4" fill="${INK}" text-anchor="middle">${escapeXml(label.toUpperCase())}</text>
 </svg>`;
 }
@@ -264,7 +252,7 @@ export function flowCard(user, activity) {
     <line x1="20" y1="${footerY - 16}" x2="440" y2="${footerY - 16}" stroke="${INK}" stroke-width="1.5" stroke-dasharray="3 4" opacity="0.35" />
     <text x="20" y="${footerY}" font-size="10" font-weight="700" letter-spacing="0.8" fill="${INK}" opacity="0.55">DESIGNED &amp; BUILT BY SACHIN SEN</text>
     <text x="440" y="${footerY}" font-size="10" font-weight="600" fill="${INK}" opacity="0.4" text-anchor="end">github.com/Sachinsen7</text>
-  `, PALETTE[3]);
+  `);
 }
 
 function loadSnapshot() {
@@ -281,7 +269,7 @@ async function main() {
 
   writeFileSync(join(OUT, 'skills.svg'), skillsCard(SKILLS));
   for (const social of SOCIALS) {
-    writeFileSync(join(OUT, `${social.file}.svg`), socialBadge(social.label, social.color));
+    writeFileSync(join(OUT, `${social.file}.svg`), socialBadge(social.label));
   }
   console.log(`profile-stats/skills.svg — ${SKILLS.length} skills`);
   console.log(`profile-stats/{${SOCIALS.map((s) => s.file).join(',')}}.svg — social badges`);

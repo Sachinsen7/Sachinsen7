@@ -35,8 +35,8 @@ writeFileSync('preview-stats.svg', statsCard(user, previous));
 writeFileSync('preview-langs.svg', langsCard(languages));
 writeFileSync('preview-flow.svg', flowCard(user, { days: activityDays, busiestWeekday: 'Tuesday' }));
 writeFileSync('preview-skills.svg', skillsCard(skills));
-writeFileSync('preview-li.svg', socialBadge('LinkedIn', '#4D7CFE'));
-writeFileSync('preview-x.svg', socialBadge('X / Twitter', '#FFD400'));
-writeFileSync('preview-mail.svg', socialBadge('Email', '#FF5D3B'));
+writeFileSync('preview-li.svg', socialBadge('LinkedIn'));
+writeFileSync('preview-x.svg', socialBadge('X / Twitter'));
+writeFileSync('preview-mail.svg', socialBadge('Email'));
 
 console.log('wrote preview-{stats,langs,flow,skills,li,x,mail}.svg');
