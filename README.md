@@ -1,6 +1,6 @@
 <div align="center">
 
-# Hi, I'm Sachin 👋
+<img src="images/banner.png" alt="Sachin Sen — Full-Stack Developer" width="100%" />
 
 </div>
 
