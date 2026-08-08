@@ -29,14 +29,23 @@ const activityDays = new Set();
   activityDays.add(d.toISOString().slice(0, 10));
 });
 
-const skills = ['JavaScript', 'Rust', 'Java', 'Go', 'Angular', 'HTML5', 'CSS3', 'Git'];
+const skills = [
+  { label: 'JavaScript', icon: 'javascript' },
+  { label: 'Rust', icon: 'rust' },
+  { label: 'Java', icon: 'java' },
+  { label: 'Go', icon: 'go' },
+  { label: 'Angular', icon: 'angular' },
+  { label: 'HTML5', icon: 'html5' },
+  { label: 'CSS3', icon: 'css3' },
+  { label: 'Git', icon: 'git' },
+];
 
 writeFileSync('preview-stats.svg', statsCard(user, previous));
 writeFileSync('preview-langs.svg', langsCard(languages));
 writeFileSync('preview-flow.svg', flowCard(user, { days: activityDays, busiestWeekday: 'Tuesday' }));
 writeFileSync('preview-skills.svg', skillsCard(skills));
-writeFileSync('preview-li.svg', socialBadge('LinkedIn'));
-writeFileSync('preview-x.svg', socialBadge('X / Twitter'));
-writeFileSync('preview-mail.svg', socialBadge('Email'));
+writeFileSync('preview-li.svg', socialBadge('LinkedIn', 'linkedin'));
+writeFileSync('preview-x.svg', socialBadge('X / Twitter', 'x'));
+writeFileSync('preview-mail.svg', socialBadge('Email', 'gmail'));
 
 console.log('wrote preview-{stats,langs,flow,skills,li,x,mail}.svg');

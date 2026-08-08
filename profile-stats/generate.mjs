@@ -1,6 +1,7 @@
 import { writeFileSync, mkdirSync, readFileSync, existsSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { ICON_PATHS } from './icons.mjs';
 
 const USERNAME = process.env.STATS_USERNAME || process.argv[2] || 'Sachinsen7';
 const TOKEN = process.env.GITHUB_TOKEN;
@@ -9,19 +10,34 @@ const SNAPSHOT_PATH = join(OUT, 'snapshot.json');
 
 const INK = '#12100E';
 const PAPER = '#FFFDF7';
-const YELLOW = '#FFD400';
-const PALETTE = ['#FFD400', '#FF5D3B', '#00D19B', '#4D7CFE', '#B15BFF'];
+const LIGHT = '#EDEAE2';
 const BOLT = 'M60 6 L25 57 L45 57 L39 94 L76 43 L54 43 Z';
-const SHADOW = 6;
-const HEADER = 44;
+const SHADOW = 4;
+const HEADER = 30;
+const CARD_W = 400;
 const MONO = "'Cascadia Code', 'JetBrains Mono', 'Fira Code', ui-monospace, 'SF Mono', Consolas, monospace";
 
-const SKILLS = ['JavaScript', 'Rust', 'Java', 'Go', 'Angular', 'HTML5', 'CSS3', 'Git'];
-const SOCIALS = [
-  { file: 'li', label: 'LinkedIn' },
-  { file: 'x', label: 'X / Twitter' },
-  { file: 'mail', label: 'Email' },
+const SKILLS = [
+  { label: 'JavaScript', icon: 'javascript' },
+  { label: 'Rust', icon: 'rust' },
+  { label: 'Java', icon: 'java' },
+  { label: 'Go', icon: 'go' },
+  { label: 'Angular', icon: 'angular' },
+  { label: 'HTML5', icon: 'html5' },
+  { label: 'CSS3', icon: 'css3' },
+  { label: 'Git', icon: 'git' },
 ];
+const SOCIALS = [
+  { file: 'li', label: 'LinkedIn', icon: 'linkedin' },
+  { file: 'x', label: 'X / Twitter', icon: 'x' },
+  { file: 'mail', label: 'Email', icon: 'gmail' },
+];
+
+function iconGroup(icon, x, y, size) {
+  const path = ICON_PATHS[icon];
+  if (!path) return '';
+  return `<g transform="translate(${x}, ${y}) scale(${size / 24})"><path d="${path}" fill="${INK}" /></g>`;
+}
 
 async function api(path) {
   const res = await fetch(`https://api.github.com${path}`, {
@@ -91,16 +107,14 @@ function escapeXml(value) {
 export function card(width, height, title, body) {
   const w = width - SHADOW;
   const h = height - SHADOW;
-  const headerPath = `M0,14 a14,14 0 0 1 14,-14 h${w - 28} a14,14 0 0 1 14,14 v${HEADER - 14} h-${w} Z`;
-
   return `<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg" font-family="${MONO}">
-  <rect x="${SHADOW}" y="${SHADOW}" width="${w}" height="${h}" rx="14" fill="${INK}" />
-  <rect x="0" y="0" width="${w}" height="${h}" rx="14" fill="${PAPER}" stroke="${INK}" stroke-width="3" />
-  <path d="${headerPath}" fill="${YELLOW}" stroke="${INK}" stroke-width="3" />
-  <g transform="translate(18, 12) scale(0.2)">
+  <rect x="${SHADOW}" y="${SHADOW}" width="${w}" height="${h}" rx="8" fill="${INK}" />
+  <rect x="0" y="0" width="${w}" height="${h}" rx="8" fill="${PAPER}" stroke="${INK}" stroke-width="2" />
+  <g transform="translate(14, 8) scale(0.14)">
     <path d="${BOLT}" fill="${INK}" />
   </g>
-  <text x="42" y="${HEADER / 2 + 6}" font-size="14" font-weight="700" letter-spacing="0.5" fill="${INK}">${escapeXml(title.toUpperCase())}</text>
+  <text x="30" y="${HEADER / 2 + 4}" font-size="11" font-weight="700" letter-spacing="0.4" fill="${INK}">${escapeXml(title.toUpperCase())}</text>
+  <line x1="0" y1="${HEADER}" x2="${w}" y2="${HEADER}" stroke="${INK}" stroke-width="1.5" opacity="0.15" />
   ${body}
 </svg>`;
 }
@@ -108,43 +122,40 @@ export function card(width, height, title, body) {
 function delta(value) {
   if (value === null || value === 0) return '';
   const sign = value > 0 ? '+' : '';
-  const color = value > 0 ? PALETTE[2] : PALETTE[1];
-  return ` <tspan fill="${color}" font-size="12">(${sign}${value})</tspan>`;
+  return ` <tspan font-size="10" opacity="0.5">(${sign}${value})</tspan>`;
 }
 
 export function statsCard(user, previous) {
   const rows = [
-    ['Public Repos', user.public_repos, previous ? user.public_repos - previous.publicRepos : null, PALETTE[0]],
-    ['Total Stars', user.totalStars, previous ? user.totalStars - previous.totalStars : null, PALETTE[1]],
-    ['Followers', user.followers, previous ? user.followers - previous.followers : null, PALETTE[2]],
+    ['Public Repos', user.public_repos, previous ? user.public_repos - previous.publicRepos : null],
+    ['Total Stars', user.totalStars, previous ? user.totalStars - previous.totalStars : null],
+    ['Followers', user.followers, previous ? user.followers - previous.followers : null],
   ];
+  const rowGap = 24;
+  const top = HEADER + 22;
 
-  const rowsSvg = rows.map(([label, value, change, color], i) => {
-    const y = HEADER + 46 + i * 40;
+  const rowsSvg = rows.map(([label, value, change], i) => {
+    const y = top + i * rowGap;
     return `
-    <rect x="20" y="${y - 16}" width="14" height="14" rx="4" fill="${color}" stroke="${INK}" stroke-width="1.5" />
-    <text x="44" y="${y}" font-size="12" font-weight="700" letter-spacing="0.6" fill="${INK}" opacity="0.85">${escapeXml(label.toUpperCase())}</text>
-    <text x="432" y="${y}" font-size="18" font-weight="800" fill="${INK}" text-anchor="end">${value}${delta(change)}</text>`;
+    <text x="14" y="${y}" font-size="10" font-weight="700" letter-spacing="0.4" fill="${INK}" opacity="0.6">${escapeXml(label.toUpperCase())}</text>
+    <text x="${CARD_W - SHADOW - 14}" y="${y}" font-size="13" font-weight="800" fill="${INK}" text-anchor="end">${value}${delta(change)}</text>`;
   }).join('');
 
-  return card(460, HEADER + 150, `${user.name || user.login}'s GitHub Stats`, `
-    <text x="440" y="${HEADER + 18}" font-size="9" font-weight="700" fill="${INK}" opacity="0.45" text-anchor="end">${new Date().toISOString().slice(0, 10)}</text>
-    ${rowsSvg}
-  `, YELLOW);
+  const height = top + (rows.length - 1) * rowGap + 18;
+  return card(CARD_W, height, `${user.name || user.login}'s GitHub Stats`, rowsSvg);
 }
 
 export function langsCard(totals) {
   const entries = Object.entries(totals).sort((a, b) => b[1] - a[1]).slice(0, 6);
   const total = entries.reduce((sum, [, v]) => sum + v, 0) || 1;
+  const shades = [1, 0.75, 0.55, 0.4, 0.28, 0.18];
 
-  const barY = HEADER + 34;
-  let barX = 21;
-  const barWidth = 410;
+  const barWidth = CARD_W - SHADOW - 28;
+  const barY = HEADER + 16;
+  let barX = 14;
   const barSvg = entries.map(([, value], i) => {
     const width = (value / total) * barWidth;
-    const rect = `<rect x="${barX}" y="${barY}" width="${width}" height="12" fill="${PALETTE[i % PALETTE.length]}">
-      <animate attributeName="width" values="0;${width}" keyTimes="0;1" begin="${i * 0.08}s" dur="0.6s" fill="freeze" calcMode="spline" keySplines="0.2 0.9 0.3 1" />
-    </rect>`;
+    const rect = `<rect x="${barX}" y="${barY}" width="${width}" height="8" fill="${INK}" opacity="${shades[i] ?? 0.15}" />`;
     barX += width;
     return rect;
   }).join('');
@@ -152,57 +163,64 @@ export function langsCard(totals) {
   const legendSvg = entries.map(([lang, value], i) => {
     const col = i % 2;
     const row = Math.floor(i / 2);
-    const x = 20 + col * 220;
-    const y = HEADER + 68 + row * 22;
+    const x = 14 + col * ((CARD_W - SHADOW - 28) / 2);
+    const y = barY + 26 + row * 18;
     const pct = ((value / total) * 100).toFixed(1);
     return `
-    <rect x="${x}" y="${y - 9}" width="10" height="10" rx="3" fill="${PALETTE[i % PALETTE.length]}" stroke="${INK}" stroke-width="1.5" />
-    <text x="${x + 16}" y="${y}" font-size="12" font-weight="600" fill="${INK}">${escapeXml(lang)} ${pct}%</text>`;
+    <rect x="${x}" y="${y - 7}" width="7" height="7" rx="2" fill="${INK}" opacity="${shades[i] ?? 0.15}" />
+    <text x="${x + 11}" y="${y}" font-size="10" font-weight="600" fill="${INK}" opacity="0.8">${escapeXml(lang)} ${pct}%</text>`;
   }).join('');
 
-  return card(460, HEADER + 150, 'Most Used Languages', `
-    <rect x="20" y="${barY}" width="412" height="14" rx="7" fill="${PAPER}" stroke="${INK}" stroke-width="2" />
-    <clipPath id="bar"><rect x="21" y="${barY + 1}" width="410" height="12" rx="6" /></clipPath>
+  const rows = Math.ceil(entries.length / 2);
+  const height = barY + 26 + rows * 18 + 10;
+  return card(CARD_W, height, 'Most Used Languages', `
+    <rect x="14" y="${barY}" width="${barWidth}" height="8" rx="4" fill="${LIGHT}" stroke="${INK}" stroke-width="1.5" />
+    <clipPath id="bar"><rect x="15" y="${barY + 1}" width="${barWidth - 2}" height="6" rx="3" /></clipPath>
     <g clip-path="url(#bar)">${barSvg}</g>
     ${legendSvg}
   `);
 }
 
 export function skillsCard(skills) {
-  const margin = 20;
-  const gap = 10;
+  const margin = 14;
+  const gap = 7;
   const cols = 3;
-  const chipW = (460 - margin * 2 - gap * (cols - 1)) / cols;
-  const chipH = 34;
+  const chipW = (CARD_W - SHADOW - margin * 2 - gap * (cols - 1)) / cols;
+  const chipH = 24;
   const rows = Math.ceil(skills.length / cols);
 
-  const chips = skills.map((label, i) => {
+  const iconSize = 13;
+  const chips = skills.map(({ label, icon }, i) => {
     const col = i % cols;
     const row = Math.floor(i / cols);
     const x = margin + col * (chipW + gap);
-    const y = HEADER + 20 + row * (chipH + gap);
-    const color = PALETTE[i % PALETTE.length];
+    const y = HEADER + 14 + row * (chipH + gap);
+    const iconX = x + 8;
+    const iconY = y + chipH / 2 - iconSize / 2;
     return `
-    <rect x="${x}" y="${y}" width="${chipW}" height="${chipH}" rx="9" fill="${PAPER}" stroke="${INK}" stroke-width="2" opacity="0">
-      <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="${i * 0.04}s" dur="0.3s" fill="freeze" />
-    </rect>
-    <rect x="${x + 9}" y="${y + chipH / 2 - 5}" width="10" height="10" rx="3" fill="${color}" stroke="${INK}" stroke-width="1.4" />
-    <text x="${x + 26}" y="${y + chipH / 2 + 4}" font-size="12" font-weight="700" fill="${INK}">${escapeXml(label)}</text>`;
+    <rect x="${x}" y="${y}" width="${chipW}" height="${chipH}" rx="5" fill="${LIGHT}" stroke="${INK}" stroke-width="1.4" />
+    ${iconGroup(icon, iconX, iconY, iconSize)}
+    <text x="${x + 8 + iconSize + 6}" y="${y + chipH / 2 + 4}" font-size="10" font-weight="700" fill="${INK}">${escapeXml(label)}</text>`;
   }).join('');
 
-  const height = HEADER + 20 + rows * chipH + (rows - 1) * gap + 20;
-  return card(460, height, 'Skills & Tools', chips);
+  const height = HEADER + 14 + rows * chipH + (rows - 1) * gap + 14;
+  return card(CARD_W, height, 'Skills & Tools', chips);
 }
 
-export function socialBadge(label) {
-  const width = 148;
-  const height = 50;
+export function socialBadge(label, icon) {
+  const width = 132;
+  const height = 38;
   const w = width - SHADOW;
   const h = height - SHADOW;
+  const iconSize = 15;
+  const iconX = 12;
+  const iconY = h / 2 - iconSize / 2;
+  const textX = iconX + iconSize + 8;
   return `<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg" font-family="${MONO}">
-  <rect x="${SHADOW}" y="${SHADOW}" width="${w}" height="${h}" rx="10" fill="${INK}" />
-  <rect x="0" y="0" width="${w}" height="${h}" rx="10" fill="${PAPER}" stroke="${INK}" stroke-width="3" />
-  <text x="${w / 2}" y="${h / 2 + 5}" font-size="13" font-weight="800" letter-spacing="0.4" fill="${INK}" text-anchor="middle">${escapeXml(label.toUpperCase())}</text>
+  <rect x="${SHADOW}" y="${SHADOW}" width="${w}" height="${h}" rx="7" fill="${INK}" />
+  <rect x="0" y="0" width="${w}" height="${h}" rx="7" fill="${PAPER}" stroke="${INK}" stroke-width="2" />
+  ${iconGroup(icon, iconX, iconY, iconSize)}
+  <text x="${textX}" y="${h / 2 + 4}" font-size="10" font-weight="800" letter-spacing="0.3" fill="${INK}">${escapeXml(label.toUpperCase())}</text>
 </svg>`;
 }
 
@@ -228,30 +246,26 @@ export function flowCard(user, activity) {
   }
   const activeCount = cells.filter(Boolean).length;
 
-  const cellSize = 22;
-  const gap = 6;
-  const stripY = HEADER + 62;
+  const cellSize = 18;
+  const gap = 4;
+  const stripY = HEADER + 40;
   const stripSvg = cells.map((active, i) => {
-    const x = 20 + i * (cellSize + gap);
-    const target = active ? 1 : 0.4;
-    return `<rect x="${x}" y="${stripY}" width="${cellSize}" height="${cellSize}" rx="5" fill="${active ? PALETTE[0] : PAPER}" stroke="${INK}" stroke-width="${active ? 2 : 1.5}" opacity="0">
-      <animate attributeName="opacity" values="0;${target}" keyTimes="0;1" begin="${i * 0.05}s" dur="0.35s" fill="freeze" />
-    </rect>`;
+    const x = 14 + i * (cellSize + gap);
+    return `<rect x="${x}" y="${stripY}" width="${cellSize}" height="${cellSize}" rx="4" fill="${active ? INK : LIGHT}" stroke="${INK}" stroke-width="1.4" />`;
   }).join('');
 
   const busyLine = activity.busiestWeekday
     ? `Most active recently: ${activity.busiestWeekday}s`
     : 'No recent public activity yet';
 
-  const footerY = stripY + cellSize + 44;
+  const footerY = stripY + cellSize + 34;
 
-  return card(460, HEADER + 138, 'Activity Flow', `
-    <text x="20" y="${HEADER + 24}" font-size="13" font-weight="700" fill="${INK}">${daysSince(user.created_at).toLocaleString()} days on GitHub · since ${joinedLabel(user.created_at)}</text>
+  return card(CARD_W, HEADER + 118, 'Activity Flow', `
+    <text x="14" y="${HEADER + 20}" font-size="11" font-weight="700" fill="${INK}">${daysSince(user.created_at).toLocaleString()} days on GitHub · since ${joinedLabel(user.created_at)}</text>
     ${stripSvg}
-    <text x="20" y="${stripY + cellSize + 22}" font-size="12" font-weight="600" fill="${INK}" opacity="0.75">${activeCount}/14 active days · ${escapeXml(busyLine)}</text>
-    <line x1="20" y1="${footerY - 16}" x2="440" y2="${footerY - 16}" stroke="${INK}" stroke-width="1.5" stroke-dasharray="3 4" opacity="0.35" />
-    <text x="20" y="${footerY}" font-size="10" font-weight="700" letter-spacing="0.8" fill="${INK}" opacity="0.55">DESIGNED &amp; BUILT BY SACHIN SEN</text>
-    <text x="440" y="${footerY}" font-size="10" font-weight="600" fill="${INK}" opacity="0.4" text-anchor="end">github.com/Sachinsen7</text>
+    <text x="14" y="${stripY + cellSize + 18}" font-size="10" font-weight="600" fill="${INK}" opacity="0.7">${activeCount}/14 active days · ${escapeXml(busyLine)}</text>
+    <line x1="14" y1="${footerY - 14}" x2="${CARD_W - SHADOW - 14}" y2="${footerY - 14}" stroke="${INK}" stroke-width="1" stroke-dasharray="2 3" opacity="0.3" />
+    <text x="14" y="${footerY}" font-size="9" font-weight="700" letter-spacing="0.6" fill="${INK}" opacity="0.5">DESIGNED &amp; BUILT BY SACHIN SEN</text>
   `);
 }
 
@@ -269,7 +283,7 @@ async function main() {
 
   writeFileSync(join(OUT, 'skills.svg'), skillsCard(SKILLS));
   for (const social of SOCIALS) {
-    writeFileSync(join(OUT, `${social.file}.svg`), socialBadge(social.label));
+    writeFileSync(join(OUT, `${social.file}.svg`), socialBadge(social.label, social.icon));
   }
   console.log(`profile-stats/skills.svg — ${SKILLS.length} skills`);
   console.log(`profile-stats/{${SOCIALS.map((s) => s.file).join(',')}}.svg — social badges`);
