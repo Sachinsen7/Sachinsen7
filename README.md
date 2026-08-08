@@ -2,8 +2,6 @@
 
 # Hi, I'm Sachin 👋
 
-**Building in public — shipping real, working software while I learn.**
-
 </div>
 
 <br>
