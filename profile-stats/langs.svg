@@ -9,7 +9,7 @@
   
     <rect x="14" y="46" width="368" height="8" fill="#EDEAE2" stroke="#12100E" stroke-width="1.5" />
     <clipPath id="bar"><rect x="15" y="47" width="366" height="6" /></clipPath>
-    <g clip-path="url(#bar)"><rect x="14" y="46" width="155.14967914310284" height="8" fill="#12100E" opacity="1" /><rect x="169.14967914310284" y="46" width="85.16530664962065" height="8" fill="#12100E" opacity="0.75" /><rect x="254.3149857927235" y="46" width="83.7974140540071" height="8" fill="#12100E" opacity="0.55" /><rect x="338.11239984673057" y="46" width="30.538136437807598" height="8" fill="#12100E" opacity="0.4" /><rect x="368.6505362845382" y="46" width="11.181738684733274" height="8" fill="#12100E" opacity="0.28" /><rect x="379.83227496927145" y="46" width="2.1677250307285227" height="8" fill="#12100E" opacity="0.18" /></g>
+    <g clip-path="url(#bar)"><rect x="14" y="46" width="155.14951069206666" height="8" fill="#12100E" opacity="1" /><rect x="169.14951069206666" y="46" width="85.16521418288637" height="8" fill="#12100E" opacity="0.75" /><rect x="254.31472487495301" y="46" width="83.79772262196778" height="8" fill="#12100E" opacity="0.55" /><rect x="338.1124474969208" y="46" width="30.538103281562897" height="8" fill="#12100E" opacity="0.4" /><rect x="368.6505507784837" y="46" width="11.181726544357101" height="8" fill="#12100E" opacity="0.28" /><rect x="379.8322773228408" y="46" width="2.1677226771591847" height="8" fill="#12100E" opacity="0.18" /></g>
     
     <rect x="14" y="65" width="7" height="7" fill="#12100E" opacity="1" />
     <text x="25" y="72" font-size="10" font-weight="600" fill="#12100E" opacity="0.8">TypeScript 42.2%</text>
