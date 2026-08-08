@@ -1,5 +1,5 @@
 import { writeFileSync } from 'node:fs';
-import { statsCard, langsCard, flowCard } from './generate.mjs';
+import { statsCard, langsCard, flowCard, skillsCard, socialBadge } from './generate.mjs';
 
 const user = {
   login: 'Sachinsen7',
@@ -29,8 +29,14 @@ const activityDays = new Set();
   activityDays.add(d.toISOString().slice(0, 10));
 });
 
+const skills = ['JavaScript', 'Rust', 'Java', 'Go', 'Angular', 'HTML5', 'CSS3', 'Git'];
+
 writeFileSync('preview-stats.svg', statsCard(user, previous));
 writeFileSync('preview-langs.svg', langsCard(languages));
 writeFileSync('preview-flow.svg', flowCard(user, { days: activityDays, busiestWeekday: 'Tuesday' }));
+writeFileSync('preview-skills.svg', skillsCard(skills));
+writeFileSync('preview-li.svg', socialBadge('LinkedIn', '#4D7CFE'));
+writeFileSync('preview-x.svg', socialBadge('X / Twitter', '#FFD400'));
+writeFileSync('preview-mail.svg', socialBadge('Email', '#FF5D3B'));
 
-console.log('wrote preview-stats.svg, preview-langs.svg, preview-flow.svg');
+console.log('wrote preview-{stats,langs,flow,skills,li,x,mail}.svg');

@@ -16,6 +16,13 @@ const SHADOW = 6;
 const HEADER = 44;
 const MONO = "'Cascadia Code', 'JetBrains Mono', 'Fira Code', ui-monospace, 'SF Mono', Consolas, monospace";
 
+const SKILLS = ['JavaScript', 'Rust', 'Java', 'Go', 'Angular', 'HTML5', 'CSS3', 'Git'];
+const SOCIALS = [
+  { file: 'li', label: 'LinkedIn', color: PALETTE[3] },
+  { file: 'x', label: 'X / Twitter', color: PALETTE[0] },
+  { file: 'mail', label: 'Email', color: PALETTE[1] },
+];
+
 async function api(path) {
   const res = await fetch(`https://api.github.com${path}`, {
     headers: {
@@ -173,6 +180,44 @@ export function langsCard(totals) {
   `);
 }
 
+export function skillsCard(skills) {
+  const margin = 20;
+  const gap = 10;
+  const cols = 3;
+  const chipW = (460 - margin * 2 - gap * (cols - 1)) / cols;
+  const chipH = 34;
+  const rows = Math.ceil(skills.length / cols);
+
+  const chips = skills.map((label, i) => {
+    const col = i % cols;
+    const row = Math.floor(i / cols);
+    const x = margin + col * (chipW + gap);
+    const y = HEADER + 20 + row * (chipH + gap);
+    const color = PALETTE[i % PALETTE.length];
+    return `
+    <rect x="${x}" y="${y}" width="${chipW}" height="${chipH}" rx="9" fill="${PAPER}" stroke="${INK}" stroke-width="2" opacity="0">
+      <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="${i * 0.04}s" dur="0.3s" fill="freeze" />
+    </rect>
+    <rect x="${x + 9}" y="${y + chipH / 2 - 5}" width="10" height="10" rx="3" fill="${color}" stroke="${INK}" stroke-width="1.4" />
+    <text x="${x + 26}" y="${y + chipH / 2 + 4}" font-size="12" font-weight="700" fill="${INK}">${escapeXml(label)}</text>`;
+  }).join('');
+
+  const height = HEADER + 20 + rows * chipH + (rows - 1) * gap + 20;
+  return card(460, height, 'Skills & Tools', chips);
+}
+
+export function socialBadge(label, color) {
+  const width = 148;
+  const height = 50;
+  const w = width - SHADOW;
+  const h = height - SHADOW;
+  return `<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg" font-family="${MONO}">
+  <rect x="${SHADOW}" y="${SHADOW}" width="${w}" height="${h}" rx="10" fill="${INK}" />
+  <rect x="0" y="0" width="${w}" height="${h}" rx="10" fill="${color}" stroke="${INK}" stroke-width="3" />
+  <text x="${w / 2}" y="${h / 2 + 5}" font-size="13" font-weight="800" letter-spacing="0.4" fill="${INK}" text-anchor="middle">${escapeXml(label.toUpperCase())}</text>
+</svg>`;
+}
+
 export function joinedLabel(createdAt) {
   const joined = new Date(createdAt);
   const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -233,6 +278,13 @@ function loadSnapshot() {
 
 async function main() {
   mkdirSync(OUT, { recursive: true });
+
+  writeFileSync(join(OUT, 'skills.svg'), skillsCard(SKILLS));
+  for (const social of SOCIALS) {
+    writeFileSync(join(OUT, `${social.file}.svg`), socialBadge(social.label, social.color));
+  }
+  console.log(`profile-stats/skills.svg — ${SKILLS.length} skills`);
+  console.log(`profile-stats/{${SOCIALS.map((s) => s.file).join(',')}}.svg — social badges`);
 
   const previous = loadSnapshot();
 
