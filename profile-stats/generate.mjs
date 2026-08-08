@@ -90,7 +90,7 @@ function escapeXml(value) {
 
 let cardSerial = 0;
 
-export function card(width, height, title, body) {
+export function card(width, height, title, body, headerColor = YELLOW) {
   const w = width - SHADOW;
   const h = height - SHADOW;
   const uid = `c${cardSerial++}`;
@@ -105,7 +105,7 @@ export function card(width, height, title, body) {
   </defs>
   <rect x="${SHADOW}" y="${SHADOW}" width="${w}" height="${h}" rx="14" fill="${INK}" />
   <rect x="0" y="0" width="${w}" height="${h}" rx="14" fill="${PAPER}" stroke="${INK}" stroke-width="3" />
-  <path d="${headerPath}" fill="${YELLOW}" stroke="${INK}" stroke-width="3" />
+  <path d="${headerPath}" fill="${headerColor}" stroke="${INK}" stroke-width="3" />
   <rect x="0" y="0" width="${w}" height="${HEADER}" fill="url(#dots-${uid})" clip-path="url(#head-${uid})" />
   <g transform="translate(18, 12) scale(0.2)">
     <path d="${BOLT}" fill="${INK}">
@@ -142,7 +142,7 @@ export function statsCard(user, previous) {
   return card(460, HEADER + 150, `${user.name || user.login}'s GitHub Stats`, `
     <text x="440" y="${HEADER + 18}" font-size="9" font-weight="700" fill="${INK}" opacity="0.45" text-anchor="end">${new Date().toISOString().slice(0, 10)}</text>
     ${rowsSvg}
-  `);
+  `, YELLOW);
 }
 
 export function langsCard(totals) {
@@ -177,7 +177,7 @@ export function langsCard(totals) {
     <clipPath id="bar"><rect x="21" y="${barY + 1}" width="410" height="12" rx="6" /></clipPath>
     <g clip-path="url(#bar)">${barSvg}</g>
     ${legendSvg}
-  `);
+  `, PALETTE[4]);
 }
 
 export function skillsCard(skills) {
@@ -203,7 +203,7 @@ export function skillsCard(skills) {
   }).join('');
 
   const height = HEADER + 20 + rows * chipH + (rows - 1) * gap + 20;
-  return card(460, height, 'Skills & Tools', chips);
+  return card(460, height, 'Skills & Tools', chips, PALETTE[2]);
 }
 
 export function socialBadge(label, color) {
@@ -264,7 +264,7 @@ export function flowCard(user, activity) {
     <line x1="20" y1="${footerY - 16}" x2="440" y2="${footerY - 16}" stroke="${INK}" stroke-width="1.5" stroke-dasharray="3 4" opacity="0.35" />
     <text x="20" y="${footerY}" font-size="10" font-weight="700" letter-spacing="0.8" fill="${INK}" opacity="0.55">DESIGNED &amp; BUILT BY SACHIN SEN</text>
     <text x="440" y="${footerY}" font-size="10" font-weight="600" fill="${INK}" opacity="0.4" text-anchor="end">github.com/Sachinsen7</text>
-  `);
+  `, PALETTE[3]);
 }
 
 function loadSnapshot() {
