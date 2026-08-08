@@ -108,8 +108,8 @@ export function card(width, height, title, body) {
   const w = width - SHADOW;
   const h = height - SHADOW;
   return `<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg" font-family="${MONO}">
-  <rect x="${SHADOW}" y="${SHADOW}" width="${w}" height="${h}" rx="8" fill="${INK}" />
-  <rect x="0" y="0" width="${w}" height="${h}" rx="8" fill="${PAPER}" stroke="${INK}" stroke-width="2" />
+  <rect x="${SHADOW}" y="${SHADOW}" width="${w}" height="${h}" fill="${INK}" />
+  <rect x="0" y="0" width="${w}" height="${h}" fill="${PAPER}" stroke="${INK}" stroke-width="2" />
   <g transform="translate(14, 8) scale(0.14)">
     <path d="${BOLT}" fill="${INK}" />
   </g>
@@ -167,15 +167,15 @@ export function langsCard(totals) {
     const y = barY + 26 + row * 18;
     const pct = ((value / total) * 100).toFixed(1);
     return `
-    <rect x="${x}" y="${y - 7}" width="7" height="7" rx="2" fill="${INK}" opacity="${shades[i] ?? 0.15}" />
+    <rect x="${x}" y="${y - 7}" width="7" height="7" fill="${INK}" opacity="${shades[i] ?? 0.15}" />
     <text x="${x + 11}" y="${y}" font-size="10" font-weight="600" fill="${INK}" opacity="0.8">${escapeXml(lang)} ${pct}%</text>`;
   }).join('');
 
   const rows = Math.ceil(entries.length / 2);
   const height = barY + 26 + rows * 18 + 10;
   return card(CARD_W, height, 'Most Used Languages', `
-    <rect x="14" y="${barY}" width="${barWidth}" height="8" rx="4" fill="${LIGHT}" stroke="${INK}" stroke-width="1.5" />
-    <clipPath id="bar"><rect x="15" y="${barY + 1}" width="${barWidth - 2}" height="6" rx="3" /></clipPath>
+    <rect x="14" y="${barY}" width="${barWidth}" height="8" fill="${LIGHT}" stroke="${INK}" stroke-width="1.5" />
+    <clipPath id="bar"><rect x="15" y="${barY + 1}" width="${barWidth - 2}" height="6" /></clipPath>
     <g clip-path="url(#bar)">${barSvg}</g>
     ${legendSvg}
   `);
@@ -198,7 +198,7 @@ export function skillsCard(skills) {
     const iconX = x + 8;
     const iconY = y + chipH / 2 - iconSize / 2;
     return `
-    <rect x="${x}" y="${y}" width="${chipW}" height="${chipH}" rx="5" fill="${LIGHT}" stroke="${INK}" stroke-width="1.4" />
+    <rect x="${x}" y="${y}" width="${chipW}" height="${chipH}" fill="${LIGHT}" stroke="${INK}" stroke-width="1.4" />
     ${iconGroup(icon, iconX, iconY, iconSize)}
     <text x="${x + 8 + iconSize + 6}" y="${y + chipH / 2 + 4}" font-size="10" font-weight="700" fill="${INK}">${escapeXml(label)}</text>`;
   }).join('');
@@ -217,8 +217,8 @@ export function socialBadge(label, icon) {
   const iconY = h / 2 - iconSize / 2;
   const textX = iconX + iconSize + 8;
   return `<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg" font-family="${MONO}">
-  <rect x="${SHADOW}" y="${SHADOW}" width="${w}" height="${h}" rx="7" fill="${INK}" />
-  <rect x="0" y="0" width="${w}" height="${h}" rx="7" fill="${PAPER}" stroke="${INK}" stroke-width="2" />
+  <rect x="${SHADOW}" y="${SHADOW}" width="${w}" height="${h}" fill="${INK}" />
+  <rect x="0" y="0" width="${w}" height="${h}" fill="${PAPER}" stroke="${INK}" stroke-width="2" />
   ${iconGroup(icon, iconX, iconY, iconSize)}
   <text x="${textX}" y="${h / 2 + 4}" font-size="10" font-weight="800" letter-spacing="0.3" fill="${INK}">${escapeXml(label.toUpperCase())}</text>
 </svg>`;
@@ -251,7 +251,7 @@ export function flowCard(user, activity) {
   const stripY = HEADER + 40;
   const stripSvg = cells.map((active, i) => {
     const x = 14 + i * (cellSize + gap);
-    return `<rect x="${x}" y="${stripY}" width="${cellSize}" height="${cellSize}" rx="4" fill="${active ? INK : LIGHT}" stroke="${INK}" stroke-width="1.4" />`;
+    return `<rect x="${x}" y="${stripY}" width="${cellSize}" height="${cellSize}" fill="${active ? INK : LIGHT}" stroke="${INK}" stroke-width="1.4" />`;
   }).join('');
 
   const busyLine = activity.busiestWeekday
