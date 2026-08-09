@@ -10,7 +10,7 @@
     <text x="14" y="52" font-size="10" font-weight="700" letter-spacing="0.4" fill="#12100E" opacity="0.6">PUBLIC REPOS</text>
     <text x="382" y="52" font-size="13" font-weight="800" fill="#12100E" text-anchor="end">57</text>
     <text x="14" y="76" font-size="10" font-weight="700" letter-spacing="0.4" fill="#12100E" opacity="0.6">TOTAL STARS</text>
-    <text x="382" y="76" font-size="13" font-weight="800" fill="#12100E" text-anchor="end">24 <tspan font-size="10" opacity="0.5">(+1)</tspan></text>
+    <text x="382" y="76" font-size="13" font-weight="800" fill="#12100E" text-anchor="end">25 <tspan font-size="10" opacity="0.5">(+1)</tspan></text>
     <text x="14" y="100" font-size="10" font-weight="700" letter-spacing="0.4" fill="#12100E" opacity="0.6">FOLLOWERS</text>
-    <text x="382" y="100" font-size="13" font-weight="800" fill="#12100E" text-anchor="end">18 <tspan font-size="10" opacity="0.5">(+1)</tspan></text>
+    <text x="382" y="100" font-size="13" font-weight="800" fill="#12100E" text-anchor="end">18</text>
 </svg>
