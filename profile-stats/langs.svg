@@ -9,14 +9,14 @@
   
     <rect x="14" y="46" width="368" height="8" fill="#EDEAE2" stroke="#12100E" stroke-width="1.5" />
     <clipPath id="bar"><rect x="15" y="47" width="366" height="6" /></clipPath>
-    <g clip-path="url(#bar)"><rect x="14" y="46" width="162.11336360102743" height="8" fill="#12100E" opacity="1" /><rect x="176.11336360102743" y="46" width="81.99805250229412" height="8" fill="#12100E" opacity="0.75" /><rect x="258.1114161033215" y="46" width="81.52404919234947" height="8" fill="#12100E" opacity="0.55" /><rect x="339.635465295671" y="46" width="29.4185637404779" height="8" fill="#12100E" opacity="0.4" /><rect x="369.0540290361489" y="46" width="10.858862517080677" height="8" fill="#12100E" opacity="0.28" /><rect x="379.9128915532296" y="46" width="2.0871084467703995" height="8" fill="#12100E" opacity="0.18" /></g>
+    <g clip-path="url(#bar)"><rect x="14" y="46" width="162.11706369602314" height="8" fill="#12100E" opacity="1" /><rect x="176.11706369602314" y="46" width="81.9999240357506" height="8" fill="#12100E" opacity="0.75" /><rect x="258.11698773177375" y="46" width="81.47378309976651" height="8" fill="#12100E" opacity="0.55" /><rect x="339.5907708315402" y="46" width="29.46296272420343" height="8" fill="#12100E" opacity="0.4" /><rect x="369.05373355574363" y="46" width="10.859110361070622" height="8" fill="#12100E" opacity="0.28" /><rect x="379.91284391681427" y="46" width="2.0871560831857314" height="8" fill="#12100E" opacity="0.18" /></g>
     
     <rect x="14" y="65" width="7" height="7" fill="#12100E" opacity="1" />
     <text x="25" y="72" font-size="10" font-weight="600" fill="#12100E" opacity="0.8">TypeScript 44.1%</text>
     <rect x="198" y="65" width="7" height="7" fill="#12100E" opacity="0.75" />
     <text x="209" y="72" font-size="10" font-weight="600" fill="#12100E" opacity="0.8">Python 22.3%</text>
     <rect x="14" y="83" width="7" height="7" fill="#12100E" opacity="0.55" />
-    <text x="25" y="90" font-size="10" font-weight="600" fill="#12100E" opacity="0.8">JavaScript 22.2%</text>
+    <text x="25" y="90" font-size="10" font-weight="600" fill="#12100E" opacity="0.8">JavaScript 22.1%</text>
     <rect x="198" y="83" width="7" height="7" fill="#12100E" opacity="0.4" />
     <text x="209" y="90" font-size="10" font-weight="600" fill="#12100E" opacity="0.8">HTML 8.0%</text>
     <rect x="14" y="101" width="7" height="7" fill="#12100E" opacity="0.28" />
